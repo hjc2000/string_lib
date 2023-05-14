@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>字符串库</Title>
+    <PackageOutputPath>$(OutputPath)</PackageOutputPath>
+    <RepositoryUrl>https://gitcode.net/qq_36148047/stringlib.git</RepositoryUrl>
+    <PackageProjectUrl>https://gitcode.net/qq_36148047/stringlib.git</PackageProjectUrl>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Version>1.0.7</Version>
+    <Authors>hjc</Authors>
+  </PropertyGroup>
+
+</Project>
