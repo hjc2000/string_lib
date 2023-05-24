@@ -9,9 +9,9 @@
     <PackageOutputPath>$(OutputPath)</PackageOutputPath>
     <RepositoryUrl>https://gitcode.net/qq_36148047/stringlib.git</RepositoryUrl>
     <PackageProjectUrl>https://gitcode.net/qq_36148047/stringlib.git</PackageProjectUrl>
-    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSymbols>False</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <Version>1.0.7</Version>
+    <Version>1.0.8</Version>
     <Authors>hjc</Authors>
   </PropertyGroup>
 
