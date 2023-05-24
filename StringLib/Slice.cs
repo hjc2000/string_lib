@@ -6,8 +6,6 @@
 		/// 对字符串进行切片，从指定的第一个字符开始到指定的最后一个字符（闭区间）<br></br>
 		/// 指定的最后一个字符是从字符串末尾开始查找的，所以切下来的字符串片段会是最长的，所以叫Max
 		/// 切下来的子字符串包含开始字符和结束字符<br></br>
-		/// 例如字符串：“123{456}123” 如果指定 start 为 “{” ,end 为 “}”，则返回值为
-		/// {456}
 		/// </summary>
 		/// <param name="str"></param>
 		/// <param name="start"></param>
@@ -31,8 +29,6 @@
 		/// 对字符串进行切片，从指定的第一个字符开始到指定的最后一个字符（闭区间）<br></br>
 		/// 指定的最后一个字符是从字符串末尾开始查找的，所以切下来的字符串片段会是最长的，所以叫Max
 		/// 切下来的子字符串包含开始字符和结束字符<br></br>
-		/// 例如字符串：“123{456}123” 如果指定 start 为 “{” ,end 为 “}”，则返回值为
-		/// {456}
 		/// </summary>
 		/// <param name="str"></param>
 		/// <param name="start"></param>
@@ -44,7 +40,7 @@
 			int endIndex = str.LastIndexOf(end);
 			try
 			{
-				return str.Substring(startIndex, endIndex - startIndex + 1);
+				return str.Substring(startIndex, endIndex - startIndex + end.Length);
 			}
 			catch
 			{
@@ -86,7 +82,7 @@
 			int endIndex = str.LastIndexOf(end);
 			try
 			{
-				return str.Substring(startIndex + 1, endIndex - startIndex - 1);
+				return str.Substring(startIndex + start.Length, endIndex - startIndex - end.Length);
 			}
 			catch
 			{
