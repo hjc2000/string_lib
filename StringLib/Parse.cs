@@ -1,21 +1,30 @@
-﻿namespace StringLib
+﻿namespace StringLib;
+
+public static class Parse
 {
-	public static class Parse
+	public static (bool success, string key, string value) ParseKeyValue(this string str)
 	{
-		public static (bool success, string key, string value) ParseKeyValue(this string str)
+		try
 		{
-			try
+			str = str.Trim();
+			int index = str.IndexOf('=');
+			string key = str[..index];
+			string value = str[(index + 1)..];
+			if (value.StartsWith('\"') || value.StartsWith('\''))
 			{
-				str = str.Trim();
-				int index = str.IndexOf('=');
-				string key = str.Substring(0, index);
-				string value = str.Substring(index + 1);
-				return (true, key, value);
+				value = value[1..];
 			}
-			catch
+
+			if (value.EndsWith('\"') || value.EndsWith('\''))
 			{
-				return (false, string.Empty, string.Empty);
+				value = value[..^1];
 			}
+
+			return (true, key, value);
+		}
+		catch
+		{
+			return (false, string.Empty, string.Empty);
 		}
 	}
 }

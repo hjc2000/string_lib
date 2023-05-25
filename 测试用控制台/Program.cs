@@ -1,16 +1,7 @@
-﻿using System.Text;
-
-StringBuilder sb = new();
-for (int i = 0; i < 10; i++)
+﻿using StringLib;
+string str = "name=a";
+(bool success, string key, string value) = str.ParseKeyValue();
+if (success)
 {
-	sb.AppendLine(i.ToString());
-}
-
-StringReader reader = new(sb.ToString());
-while (true)
-{
-	string? str = reader.ReadLine();
-	if (str == null)
-		break;
-	Console.WriteLine(str);
+	Console.WriteLine($"{key}={value}");
 }
