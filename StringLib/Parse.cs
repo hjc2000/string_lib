@@ -1,4 +1,6 @@
-﻿namespace StringLib;
+﻿using System.Text;
+
+namespace StringLib;
 
 public static class Parse
 {
@@ -27,18 +29,29 @@ public static class Parse
 	}
 
 	/// <summary>
-	/// 一直读取行（一次读取一行）知道读到一行，这一行中包含 match
+	/// 一直读取行（一次读取一行）直到读到一行，这一行内容等于 match
 	/// </summary>
 	/// <param name="reader"></param>
 	/// <param name="match"></param>
-	public static void ReadLineUntil(this StringReader reader, string match)
+	/// <exception cref="Exception">如果没读到 match 字符串就结束了会抛出异常</exception>
+	public static string ReadLineUntil(this StringReader reader, string match)
 	{
+		StringBuilder sb = new();
 		while (true)
 		{
 			string? line = reader.ReadLine();
-			if (line == null) break;
-			if (line.Contains(match)) break;
+			if (line == null)
+			{
+				throw new Exception("没读到 match 字符串就结束了");
+			}
+			else
+			{
+				sb.AppendLine(line);
+				if (line == match) break;
+			}
 		}
+
+		return sb.ToString();
 	}
 	/// <summary>
 	/// 去除字符串开头和结尾位置的引号
