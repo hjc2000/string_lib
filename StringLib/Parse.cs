@@ -69,6 +69,7 @@ public static class Parse
 			value = value[..^1];
 		}
 
+		value = value.Trim();
 		return value;
 	}
 }
