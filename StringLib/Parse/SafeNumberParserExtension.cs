@@ -8,9 +8,9 @@ namespace StringLib.Parse;
 /// 能够自动识别 16 进制数和 10 进制数的字符串。（要求 16 进制数的字符串以 0x 前导符开始，10 进制数
 /// 没有任何修饰符）
 /// </summary>
-public static class SafeNumberParser
+public static class SafeNumberParserExtension
 {
-	public static sbyte ParseInt8(string str)
+	public static sbyte SafeToInt8(this string str)
 	{
 		try
 		{
@@ -30,7 +30,7 @@ public static class SafeNumberParser
 		}
 	}
 
-	public static byte ParseUint8(string str)
+	public static byte SafeToUint8(this string str)
 	{
 		try
 		{
@@ -50,7 +50,7 @@ public static class SafeNumberParser
 		}
 	}
 
-	public static short ParseInt16(string str)
+	public static short SafeToInt16(this string str)
 	{
 		try
 		{
@@ -70,7 +70,7 @@ public static class SafeNumberParser
 		}
 	}
 
-	public static ushort ParseUint16(string str)
+	public static ushort SafeToUint16(this string str)
 	{
 		try
 		{
@@ -90,7 +90,7 @@ public static class SafeNumberParser
 		}
 	}
 
-	public static int ParseInt32(string str)
+	public static int SafeToInt32(this string str)
 	{
 		try
 		{
@@ -110,7 +110,7 @@ public static class SafeNumberParser
 		}
 	}
 
-	public static uint ParseUInt32(string str)
+	public static uint SafeToUInt32(this string str)
 	{
 		try
 		{
@@ -130,7 +130,7 @@ public static class SafeNumberParser
 		}
 	}
 
-	public static ulong ParseUInt64(string str)
+	public static ulong SafeToUInt64(this string str)
 	{
 		try
 		{
@@ -150,7 +150,7 @@ public static class SafeNumberParser
 		}
 	}
 
-	public static long ParseInt64(string str)
+	public static long SafeToInt64(this string str)
 	{
 		try
 		{
@@ -170,7 +170,7 @@ public static class SafeNumberParser
 		}
 	}
 
-	public static double ParseDouble(string str)
+	public static double SafeToDouble(this string str)
 	{
 		try
 		{
@@ -190,7 +190,7 @@ public static class SafeNumberParser
 		}
 	}
 
-	public static BigInteger ParseBigInt(string str)
+	public static BigInteger SafeToBigInt(this string str)
 	{
 		try
 		{
