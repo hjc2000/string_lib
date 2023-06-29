@@ -14,7 +14,15 @@ public static class SafeNumberParser
 	{
 		try
 		{
-			return str.StartsWith("0x") ? sbyte.Parse(str, NumberStyles.HexNumber) : sbyte.Parse(str);
+			if (str.StartsWith("0x"))
+			{
+				str = str[2..];
+				return sbyte.Parse(str, NumberStyles.HexNumber);
+			}
+			else
+			{
+				return sbyte.Parse(str);
+			}
 		}
 		catch
 		{
@@ -26,7 +34,15 @@ public static class SafeNumberParser
 	{
 		try
 		{
-			return str.StartsWith("0x") ? byte.Parse(str, NumberStyles.HexNumber) : byte.Parse(str);
+			if (str.StartsWith("0x"))
+			{
+				str = str[2..];
+				return byte.Parse(str, NumberStyles.HexNumber);
+			}
+			else
+			{
+				return byte.Parse(str);
+			}
 		}
 		catch
 		{
@@ -38,7 +54,15 @@ public static class SafeNumberParser
 	{
 		try
 		{
-			return str.StartsWith("0x") ? short.Parse(str, NumberStyles.HexNumber) : short.Parse(str);
+			if (str.StartsWith("0x"))
+			{
+				str = str[2..];
+				return short.Parse(str, NumberStyles.HexNumber);
+			}
+			else
+			{
+				return short.Parse(str);
+			}
 		}
 		catch
 		{
@@ -50,7 +74,15 @@ public static class SafeNumberParser
 	{
 		try
 		{
-			return str.StartsWith("0x") ? ushort.Parse(str, NumberStyles.HexNumber) : ushort.Parse(str);
+			if (str.StartsWith("0x"))
+			{
+				str = str[2..];
+				return ushort.Parse(str, NumberStyles.HexNumber);
+			}
+			else
+			{
+				return ushort.Parse(str);
+			}
 		}
 		catch
 		{
@@ -62,7 +94,15 @@ public static class SafeNumberParser
 	{
 		try
 		{
-			return str.StartsWith("0x") ? int.Parse(str, NumberStyles.HexNumber) : int.Parse(str);
+			if (str.StartsWith("0x"))
+			{
+				str = str[2..];
+				return int.Parse(str, NumberStyles.HexNumber);
+			}
+			else
+			{
+				return int.Parse(str);
+			}
 		}
 		catch
 		{
@@ -74,7 +114,15 @@ public static class SafeNumberParser
 	{
 		try
 		{
-			return str.StartsWith("0x") ? uint.Parse(str, NumberStyles.HexNumber) : uint.Parse(str);
+			if (str.StartsWith("0x"))
+			{
+				str = str[2..];
+				return uint.Parse(str, NumberStyles.HexNumber);
+			}
+			else
+			{
+				return uint.Parse(str);
+			}
 		}
 		catch
 		{
@@ -86,7 +134,15 @@ public static class SafeNumberParser
 	{
 		try
 		{
-			return str.StartsWith("0x") ? ulong.Parse(str, NumberStyles.HexNumber) : ulong.Parse(str);
+			if (str.StartsWith("0x"))
+			{
+				str = str[2..];
+				return ulong.Parse(str, NumberStyles.HexNumber);
+			}
+			else
+			{
+				return ulong.Parse(str);
+			}
 		}
 		catch
 		{
@@ -98,7 +154,15 @@ public static class SafeNumberParser
 	{
 		try
 		{
-			return str.StartsWith("0x") ? long.Parse(str, NumberStyles.HexNumber) : long.Parse(str);
+			if (str.StartsWith("0x"))
+			{
+				str = str[2..];
+				return long.Parse(str, NumberStyles.HexNumber);
+			}
+			else
+			{
+				return long.Parse(str);
+			}
 		}
 		catch
 		{
@@ -110,7 +174,15 @@ public static class SafeNumberParser
 	{
 		try
 		{
-			return str.StartsWith("0x") ? double.Parse(str, NumberStyles.HexNumber) : double.Parse(str);
+			if (str.StartsWith("0x"))
+			{
+				str = str[2..];
+				return double.Parse(str, NumberStyles.HexNumber);
+			}
+			else
+			{
+				return double.Parse(str);
+			}
 		}
 		catch
 		{
@@ -122,7 +194,15 @@ public static class SafeNumberParser
 	{
 		try
 		{
-			return str.StartsWith("0x") ? BigInteger.Parse(str, NumberStyles.HexNumber) : BigInteger.Parse(str);
+			if (str.StartsWith("0x"))
+			{
+				str = str[2..];
+				return BigInteger.Parse(str, NumberStyles.HexNumber);
+			}
+			else
+			{
+				return BigInteger.Parse(str);
+			}
 		}
 		catch
 		{
