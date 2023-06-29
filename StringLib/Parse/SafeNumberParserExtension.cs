@@ -10,7 +10,7 @@ namespace StringLib.Parse;
 /// </summary>
 public static class SafeNumberParserExtension
 {
-	public static sbyte SafeToInt8(this string str)
+	public static sbyte SafelyToInt8(this string str)
 	{
 		try
 		{
@@ -30,7 +30,7 @@ public static class SafeNumberParserExtension
 		}
 	}
 
-	public static byte SafeToUint8(this string str)
+	public static byte SafelyToUint8(this string str)
 	{
 		try
 		{
@@ -50,7 +50,7 @@ public static class SafeNumberParserExtension
 		}
 	}
 
-	public static short SafeToInt16(this string str)
+	public static short SafelyToInt16(this string str)
 	{
 		try
 		{
@@ -70,7 +70,7 @@ public static class SafeNumberParserExtension
 		}
 	}
 
-	public static ushort SafeToUint16(this string str)
+	public static ushort SafelyToUint16(this string str)
 	{
 		try
 		{
@@ -90,7 +90,7 @@ public static class SafeNumberParserExtension
 		}
 	}
 
-	public static int SafeToInt32(this string str)
+	public static int SafelyToInt32(this string str)
 	{
 		try
 		{
@@ -110,7 +110,7 @@ public static class SafeNumberParserExtension
 		}
 	}
 
-	public static uint SafeToUInt32(this string str)
+	public static uint SafelyToUInt32(this string str)
 	{
 		try
 		{
@@ -130,7 +130,7 @@ public static class SafeNumberParserExtension
 		}
 	}
 
-	public static ulong SafeToUInt64(this string str)
+	public static ulong SafelyToUInt64(this string str)
 	{
 		try
 		{
@@ -150,7 +150,7 @@ public static class SafeNumberParserExtension
 		}
 	}
 
-	public static long SafeToInt64(this string str)
+	public static long SafelyToInt64(this string str)
 	{
 		try
 		{
@@ -170,7 +170,7 @@ public static class SafeNumberParserExtension
 		}
 	}
 
-	public static double SafeToDouble(this string str)
+	public static double SafelyToDouble(this string str)
 	{
 		try
 		{
@@ -190,7 +190,7 @@ public static class SafeNumberParserExtension
 		}
 	}
 
-	public static BigInteger SafeToBigInt(this string str)
+	public static BigInteger SafelyToBigInt(this string str)
 	{
 		try
 		{
