@@ -26,7 +26,15 @@ public static class SafeNumberParserExtension
 		}
 		catch
 		{
-			return 0;
+			try
+			{
+				Console.WriteLine($"找不到 {str} 开头的 0x，尝试以 16 进制解析");
+				return sbyte.Parse(str, NumberStyles.HexNumber);
+			}
+			catch
+			{
+				return 0;
+			}
 		}
 	}
 
@@ -46,7 +54,15 @@ public static class SafeNumberParserExtension
 		}
 		catch
 		{
-			return 0;
+			try
+			{
+				Console.WriteLine($"找不到 {str} 开头的 0x，尝试以 16 进制解析");
+				return byte.Parse(str, NumberStyles.HexNumber);
+			}
+			catch
+			{
+				return 0;
+			}
 		}
 	}
 
@@ -66,7 +82,15 @@ public static class SafeNumberParserExtension
 		}
 		catch
 		{
-			return 0;
+			try
+			{
+				Console.WriteLine($"找不到 {str} 开头的 0x，尝试以 16 进制解析");
+				return short.Parse(str, NumberStyles.HexNumber);
+			}
+			catch
+			{
+				return 0;
+			}
 		}
 	}
 
@@ -86,7 +110,15 @@ public static class SafeNumberParserExtension
 		}
 		catch
 		{
-			return 0;
+			try
+			{
+				Console.WriteLine($"找不到 {str} 开头的 0x，尝试以 16 进制解析");
+				return ushort.Parse(str, NumberStyles.HexNumber);
+			}
+			catch
+			{
+				return 0;
+			}
 		}
 	}
 
@@ -106,7 +138,15 @@ public static class SafeNumberParserExtension
 		}
 		catch
 		{
-			return 0;
+			try
+			{
+				Console.WriteLine($"找不到 {str} 开头的 0x，尝试以 16 进制解析");
+				return int.Parse(str, NumberStyles.HexNumber);
+			}
+			catch
+			{
+				return 0;
+			}
 		}
 	}
 
@@ -126,7 +166,15 @@ public static class SafeNumberParserExtension
 		}
 		catch
 		{
-			return 0;
+			try
+			{
+				Console.WriteLine($"找不到 {str} 开头的 0x，尝试以 16 进制解析");
+				return uint.Parse(str, NumberStyles.HexNumber);
+			}
+			catch
+			{
+				return 0;
+			}
 		}
 	}
 
@@ -146,7 +194,15 @@ public static class SafeNumberParserExtension
 		}
 		catch
 		{
-			return 0;
+			try
+			{
+				Console.WriteLine($"找不到 {str} 开头的 0x，尝试以 16 进制解析");
+				return ulong.Parse(str, NumberStyles.HexNumber);
+			}
+			catch
+			{
+				return 0;
+			}
 		}
 	}
 
@@ -166,7 +222,15 @@ public static class SafeNumberParserExtension
 		}
 		catch
 		{
-			return 0;
+			try
+			{
+				Console.WriteLine($"找不到 {str} 开头的 0x，尝试以 16 进制解析");
+				return long.Parse(str, NumberStyles.HexNumber);
+			}
+			catch
+			{
+				return 0;
+			}
 		}
 	}
 
@@ -186,7 +250,15 @@ public static class SafeNumberParserExtension
 		}
 		catch
 		{
-			return 0;
+			try
+			{
+				Console.WriteLine($"找不到 {str} 开头的 0x，尝试以 16 进制解析");
+				return double.Parse(str, NumberStyles.HexNumber);
+			}
+			catch
+			{
+				return 0;
+			}
 		}
 	}
 
@@ -206,7 +278,15 @@ public static class SafeNumberParserExtension
 		}
 		catch
 		{
-			return 0;
+			try
+			{
+				Console.WriteLine($"找不到 {str} 开头的 0x，尝试以 16 进制解析");
+				return BigInteger.Parse(str, NumberStyles.HexNumber);
+			}
+			catch
+			{
+				return 0;
+			}
 		}
 	}
 }
