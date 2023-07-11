@@ -2,6 +2,15 @@
 using System.Xml.Serialization;
 
 namespace StringLib;
+
+public class XmlDeserializeException : Exception
+{
+	public XmlDeserializeException(string? message, Exception? innerException) : base(message, innerException)
+	{
+
+	}
+}
+
 public static class Xml
 {
 	public static string ObjToXml<T>(object? o)
@@ -33,9 +42,23 @@ public static class Xml
 		}
 	}
 
+	/// <summary>
+	/// 将含有 xml 的流反序列化为对象
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="xmlStream"></param>
+	/// <returns></returns>
+	/// <exception cref="XmlDeserializeException"></exception>
 	public static T? XmlStreamToObj<T>(Stream xmlStream)
 	{
-		XmlSerializer xmlSerializer = new(typeof(T));
-		return (T?)xmlSerializer.Deserialize(xmlStream);
+		try
+		{
+			XmlSerializer xmlSerializer = new(typeof(T));
+			return (T?)xmlSerializer.Deserialize(xmlStream);
+		}
+		catch (Exception ex)
+		{
+			throw new XmlDeserializeException("XmlStreamToObj 错误", ex);
+		}
 	}
 }
