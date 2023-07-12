@@ -8,10 +8,7 @@ namespace StringLib;
 /// </summary>
 public class XmlDeserializeException : Exception
 {
-	public XmlDeserializeException()
-	{
-	}
-
+	public XmlDeserializeException() { }
 	public XmlDeserializeException(string? message, Exception? innerException) : base(message, innerException) { }
 }
 
@@ -20,10 +17,7 @@ public class XmlDeserializeException : Exception
 /// </summary>
 public class XmlSerializeException : Exception
 {
-	public XmlSerializeException()
-	{
-	}
-
+	public XmlSerializeException() { }
 	public XmlSerializeException(string? message, Exception? innerException) : base(message, innerException) { }
 }
 
